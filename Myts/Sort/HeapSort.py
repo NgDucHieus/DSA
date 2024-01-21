@@ -11,7 +11,6 @@ def heapify(arr,N,i):
     #change root if needed
     if largest != i:
         arr[i], arr[largest] = arr[largest], arr[i]
-
         #Heapify the root
         heapify(arr,N,largest)
 def heapSort(arr):

@@ -6,8 +6,9 @@ for i in range(len(Arr)):
         if Arr[i] > Arr[j]:
             Arr[i] = Arr[j]
             Arr[j] = temp
-            
-
-
 
 print(Arr)
+
+
+a ="sadbutsad"
+print(a[0:8])
