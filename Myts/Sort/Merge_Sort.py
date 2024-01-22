@@ -1,22 +1,14 @@
-# Python program for implementation of MergeSort
-
-
 def mergeSort(arr):
 	if len(arr) > 1:
 
-		# Finding the mid of the array
 		mid = len(arr)//2
 
-		# Dividing the array elements
 		L = arr[:mid]
 
-		# Into 2 halves
 		R = arr[mid:]
 
-		# Sorting the first half
 		mergeSort(L)
 
-		# Sorting the second half
 		mergeSort(R)
 
 		i = j = k = 0
@@ -48,6 +40,32 @@ def printList(arr):
 	for i in range(len(arr)):
 		print(arr[i], end=" ")
 	print()
+def mergeOrderList(ListA,ListB):
+	newList = list()
+	a= 0
+	b = 0
+	while a <len(ListA) and b < len(ListB):
+		newList.append(ListA[a])
+		a+=1
+	else:
+		newList.append(ListB[b])
+		b+=1
+	while a<len(ListA):
+		newList.append(ListA[a])
+		a+=1
+	while b<len(ListB):
+		newList.append(ListB[b])
+		b+=1
+	return newList
+	
+
+def mergeSort(Arr):
+	if len(Arr) <= 1:
+		return Arr
+	else:
+		mid = len(Arr)//2
+		leftHalf = mergeSort(Arr[:mid])
+		rightHalf = mergeSort(Arr[mid:])
 
 
 # Driver Code
