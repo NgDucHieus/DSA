@@ -58,3 +58,26 @@ if __name__ == "__main__":
     root.rightChild.leftChild = Node(12)
     InorderTravesal(root)
 
+
+class BStree:
+    def __init__(self):
+        self._root = None
+        self._size = 0
+    
+    def __len__(self):
+        return self._size
+class BStreeNode:
+    def __init__(self,key):
+        self.key = key
+        self.left = None
+        self.right  = None
+    def _bstSearch(self,subtree,target):
+        if subtree is None:
+            return None
+        elif target <subtree.key:
+            return self._bstSearch(subtree.left,target)
+        elif target >subtree.key:
+            return self._bstSearch(subtree.right,target)
+        else:
+            return subtree
+
