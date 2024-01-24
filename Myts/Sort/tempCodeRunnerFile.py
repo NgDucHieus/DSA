@@ -1,2 +1,1 @@
-print("Given array is")
-	# printList(arr)
+print(Arr [-1])

@@ -13,7 +13,6 @@ class SimpleQueue():
     def size(self):
         return len(self.items)
 myqueuq = SimpleQueue()
-
 myqueuq.enqueue(10)
 myqueuq.enqueue(20)
 myqueuq.enqueue(30)
